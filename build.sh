@@ -8,13 +8,13 @@ cd kali-nethunter-installer
 mkdir -p kernels/eleven/a5y17lte
 cat /home/loco/Code/nethunter/devices.yml >> kernels/devices.yml
 cd ..
-git https://github.com/LineageOS/android_kernel_samsung_universal7880 -b lineage-18.1
+git https://github.com/cycoslave/android_kernel_samsung_universal7880 -b lineage-18.1
 cd android_kernel_samsung_universal7880
-git clone https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel-builder.git
+git clone https://github.com/cycoslave/kali-nethunter-kernel-builder
 cd kali-nethunter-kernel-builder
-cp /home/loco/Code/nethunter/local.config.example.a5y17lte ./local.config
-cp /home/loco/Code/nethunter/config ./config
-cp /home/loco/Code/nethunter/anykernel.sh-a5y17lte ./anykernel3/anykernel.sh
+#cp /home/loco/Code/nethunter/local.config.example.a5y17lte ./local.config
+#cp /home/loco/Code/nethunter/config ./config
+#cp /home/loco/Code/nethunter/anykernel.sh-a5y17lte ./anykernel3/anykernel.sh
 
 echo "Run ./build.sh and press S to get toolchain" 
 echo " Then press 2 to configure and 3 to compile the kernel, see if all works"
